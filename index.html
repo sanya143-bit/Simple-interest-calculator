@@ -23,14 +23,14 @@
     <!-- Results Section (Initially Hidden) -->
     <div id="results" style="display: none; margin-top: 20px;">
         <div class="destination">
-            <h3>Boracay Beach, Philippines</h3>
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach" width="300">
-            <p>A beautiful tropical beach with white sand and clear blue water.</p>
+            <h3>Golden Temple, India</h3>
+            <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f" alt="Temple" width="300">
+            <p>A spiritually significant and magnificent architectural marvel in Amritsar.</p>
         </div>
         <div class="destination">
-            <h3>Maui Beach, Hawaii</h3>
-            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206" alt="Beach" width="300">
-            <p>Famous for its scenic beauty, gorgeous sunsets, and relaxing waves.</p>
+            <h3>Angkor Wat, Cambodia</h3>
+            <img src="https://images.unsplash.com/photo-1578637387939-43c5251f0f0c" alt="Temple" width="300">
+            <p>The largest religious monument in the world, known for its incredible history.</p>
         </div>
     </div>
 
@@ -39,11 +39,11 @@
             let input = document.getElementById('searchInput').value.toLowerCase().trim();
             let results = document.getElementById('results');
             
-            if(input === 'beach' || input === 'beaches') {
+            if(input === 'temple' || input === 'temples') {
                 results.style.display = 'block';
             } else {
                 results.style.display = 'none';
-                alert('Please type "beach" to see results.');
+                alert('Please type "temple" to see results.');
             }
         }
         function clearResults() {
