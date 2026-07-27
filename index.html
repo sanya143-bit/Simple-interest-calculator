@@ -21,7 +21,7 @@
     <p>Explore wonderful destinations around the world!</p>
 
     <!-- Results Section -->
-    <div id="results">
+    <div id="results" style="margin-top: 20px;">
         <div class="destination">
             <h3>Boracay Beach, Philippines</h3>
             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach" width="300">
@@ -36,12 +36,13 @@
 
     <script>
         function searchDestination() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
+            let input = document.getElementById('searchInput').value.toLowerCase().trim();
             let results = document.getElementById('results');
-            if(input.includes('beach')) {
+            
+            if(input === 'beach' || input === 'beaches') {
                 results.style.display = 'block';
             } else {
-                results.innerHTML = '<p>No results found. Try searching for "beach".</p>';
+                alert('Please type "beach" to see results.');
             }
         }
         function clearResults() {
