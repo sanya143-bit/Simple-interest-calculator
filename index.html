@@ -20,8 +20,8 @@
     <h1>Welcome to Travel Recommendation</h1>
     <p>Explore wonderful destinations around the world!</p>
 
-    <!-- Results Section -->
-    <div id="results" style="margin-top: 20px;">
+    <!-- Results Section (Initially Hidden) -->
+    <div id="results" style="display: none; margin-top: 20px;">
         <div class="destination">
             <h3>Boracay Beach, Philippines</h3>
             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach" width="300">
@@ -42,11 +42,13 @@
             if(input === 'beach' || input === 'beaches') {
                 results.style.display = 'block';
             } else {
+                results.style.display = 'none';
                 alert('Please type "beach" to see results.');
             }
         }
         function clearResults() {
             document.getElementById('searchInput').value = '';
+            document.getElementById('results').style.display = 'none';
         }
     </script>
 </body>
