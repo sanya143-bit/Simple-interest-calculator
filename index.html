@@ -22,18 +22,18 @@
 
     <!-- Results Section (Initially Hidden) -->
     <div id="results" style="display: none; margin-top: 20px;">
-        <!-- First Temple: Golden Temple -->
+        <!-- First Country: Australia -->
         <div class="destination">
-            <h3>Golden Temple, India</h3>
-            <img src="goldentemple.jfif" alt="Golden Temple" width="300">
-            <p>A spiritually significant and magnificent architectural marvel in Amritsar.</p>
+            <h3>Australia</h3>
+            <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be" alt="Australia" width="300">
+            <p>A beautiful country known for its stunning landscapes, Sydney Opera House, and beaches.</p>
         </div>
         
-        <!-- Second Temple: Ram Mandir -->
+        <!-- Second Country: Japan -->
         <div class="destination">
-            <h3>Ram Mandir, Ayodhya</h3>
-            <img src="Rammandir.jfif" alt="Ram Mandir Ayodhya" width="300">
-            <p>A monumental Hindu temple in Ayodhya, Uttar Pradesh, India, at the sacred site of Ram Janmabhoomi.</p>
+            <h3>Japan</h3>
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e" alt="Japan" width="300">
+            <p>An island country in East Asia renowned for its rich culture, temples, and cherry blossoms.</p>
         </div>
     </div>
 
@@ -42,11 +42,11 @@
             let input = document.getElementById('searchInput').value.toLowerCase().trim();
             let results = document.getElementById('results');
             
-            if(input === 'temple' || input === 'temples') {
+            if(input === 'country' || input === 'countries' || input === 'australia' || input === 'japan') {
                 results.style.display = 'block';
             } else {
                 results.style.display = 'none';
-                alert('Please type "temple" to see results.');
+                alert('Please type "country" to see results.');
             }
         }
         function clearResults() {
