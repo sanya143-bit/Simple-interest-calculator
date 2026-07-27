@@ -13,11 +13,40 @@
         
         <!-- Search Bar and Buttons -->
         <input type="text" id="searchInput" placeholder="Enter a keyword...">
-        <button id="searchBtn">Search</button>
-        <button id="clearBtn">Clear</button>
+        <button id="searchBtn" onclick="searchDestination()">Search</button>
+        <button id="clearBtn" onclick="clearResults()">Clear</button>
     </nav>
 
     <h1>Welcome to Travel Recommendation</h1>
     <p>Explore wonderful destinations around the world!</p>
+
+    <!-- Results Section -->
+    <div id="results">
+        <div class="destination">
+            <h3>Boracay Beach, Philippines</h3>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach" width="300">
+            <p>A beautiful tropical beach with white sand and clear blue water.</p>
+        </div>
+        <div class="destination">
+            <h3>Maui Beach, Hawaii</h3>
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206" alt="Beach" width="300">
+            <p>Famous for its scenic beauty, gorgeous sunsets, and relaxing waves.</p>
+        </div>
+    </div>
+
+    <script>
+        function searchDestination() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let results = document.getElementById('results');
+            if(input.includes('beach')) {
+                results.style.display = 'block';
+            } else {
+                results.innerHTML = '<p>No results found. Try searching for "beach".</p>';
+            }
+        }
+        function clearResults() {
+            document.getElementById('searchInput').value = '';
+        }
+    </script>
 </body>
 </html>
